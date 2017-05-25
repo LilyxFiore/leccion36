@@ -22,10 +22,10 @@ var funcionExito = function (posicion) {
     latitud = posicion.coords.latitude;
     longitud = posicion.coords.longitude;
 
-    var pos ={ lat: latitud, lng: longitud  };
 
-    var map = new google.maps.Map(document.getElementById("map"),
-        { zoom: 18, center: pos});
+    var map = new google.maps.Map(document.getElementById("map"));
+    map.setZoom(18);
+    map.setCenter({lat: latitud, lng: longitud});
 
     var miUbicacion = new google.maps.Marker({
         position: {lat: latitud, lng: longitud},
