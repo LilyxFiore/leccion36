@@ -3,16 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Encuentrame| Api Google Maps</title>
 </head>
 <body>
+    <header>
+        <span class="glyphicon glyphicon-cog"></span>
+        <input type="text" placeholder="Ingrese tu punto de partida" class="form-control" id="partida">
+        <span class="glyphicon glyphicon-send"></span>
+        <input type="text" placeholder="Ingrese tu destino" id="destino" class="form-control">
+        <button id="trazar" class="btn btn-default bold">Trazar ruta</button>
+        <span class="barra">|</span>
+        <button id="encuentrame" class="btn btn-default bold">Encuentrame</button>
+    </header>
     <div id="map"></div>
-    <button id="encuentrame">Encuentrame</button>
+    <div id="tarifa" class="none"></div>
+
 
     <script src="assets/js/main.js"></script>
     <script async defer
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDD00cONmCUXgGkTwXf7FzK4FKMgV1M77k&callback=initMap"></script>
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDD00cONmCUXgGkTwXf7FzK4FKMgV1M77k&callback=initMap&libraries=places"></script>
 
 </body>
 </html>
